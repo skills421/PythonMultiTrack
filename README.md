@@ -30,3 +30,8 @@ GUI
 * step 025 - Creating an empty GUI Frame
 * step 026 - Adding a menu to our GUI
 * step 027 - Laying out the frames
+
+* step 028 - Lay out the buttons
+Note that in versions 3.8+ of Python on Mac the buttons may not display the text.  To get around this, use ttk.Button instead of tk.Button and remove the font size from the arguments to the constructor.
+
+

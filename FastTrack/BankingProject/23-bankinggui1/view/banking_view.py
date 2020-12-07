@@ -1,5 +1,6 @@
 import sys
 import tkinter as tk
+from tkinter import ttk
 
 
 class BankingView(tk.Frame):
@@ -33,12 +34,24 @@ class BankingView(tk.Frame):
         file_menu.add_command(label='Close', command=lambda: sys.exit())
 
     def init_left_bar_buttons(self):
-        frame = tk.Frame(self.window, bd=5, bg='blue')
-        frame.place(relx=0.25, rely=0.02, relheight=0.1, relwidth=0.46, anchor='n')
+        frame = tk.Frame(self.window, bd=5)
+        frame.place(relx=0.25, rely=0.02, relheight=0.1, anchor='n')
+
+        self.accounts_btn = ttk.Button(frame, text='Upload Accounts')
+        self.accounts_btn.pack(side=tk.LEFT, fill=tk.X)
+
+        self.transactions_btn = ttk.Button(frame, text='Upload Transactions')
+        self.transactions_btn.pack(side=tk.LEFT, fill=tk.X)
 
     def init_right_bar_buttons(self):
-        frame = tk.Frame(self.window, bd=5, bg='blue')
-        frame.place(relx=0.75, rely=0.02, relheight=0.1, relwidth=0.46, anchor='n')
+        frame = tk.Frame(self.window, bd=5)
+        frame.place(relx=0.75, rely=0.02, relheight=0.1, anchor='n')
+
+        self.process_btn = ttk.Button(frame, text='Process Transactions')
+        self.process_btn.pack(side=tk.LEFT, fill=tk.X)
+
+        self.analyse_btn = ttk.Button(frame, text='Analyse Transactions')
+        self.analyse_btn.pack(side=tk.LEFT, fill=tk.X)
 
     def init_input_frame(self):
         frame = tk.Frame(self.window, bd=5, bg='blue')
