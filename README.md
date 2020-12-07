@@ -5,3 +5,4 @@ This project contains the following branches which correspond with steps in the 
 * step 003 - assigning data to variables
 * step 004 - different variable types
 * step 005 - explicit casting
+* step 006 - extracting our data
