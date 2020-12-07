@@ -44,3 +44,4 @@ Note that in versions 3.8+ of Python on Mac the buttons may not display the text
 MATLAB
 
 * step 034 - Line Graphs
+* step 035 - Scatter Graphs
