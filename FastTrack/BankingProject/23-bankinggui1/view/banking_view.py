@@ -54,12 +54,27 @@ class BankingView(tk.Frame):
         self.analyse_btn.pack(side=tk.LEFT, fill=tk.X)
 
     def init_input_frame(self):
-        frame = tk.Frame(self.window, bd=5, bg='blue')
+        frame = tk.Frame(self.window, bd=5)
         frame.place(relx=0.25, rely=0.14, relheight=0.72, relwidth=0.46, anchor='n')
 
+        self.input_tab_control = ttk.Notebook(frame)
+        self.input_tab_control.place(relx=0, rely=0, relwidth=1, relheight=1)
+
+        self.accounts_tab = tk.Frame(self.input_tab_control)
+        self.transactions_tab = tk.Frame(self.input_tab_control)
+
+        self.input_tab_control.add(self.accounts_tab, text='Accounts File')
+        self.input_tab_control.add(self.transactions_tab, text='Transactions File')
+
     def init_output_frame(self):
-        frame = tk.Frame(self.window, bd=5, bg='blue')
+        frame = tk.Frame(self.window, bd=5)
         frame.place(relx=0.75, rely=0.14, relheight=0.72, relwidth=0.46, anchor='n')
+
+        self.output_tab_control = ttk.Notebook(frame)
+        self.output_tab_control.place(relx=0, rely=0, relwidth=1, relheight=1)
+
+        self.output_tab = tk.Frame(self.output_tab_control)
+        self.output_tab_control.add(self.output_tab, text='Output File')
 
     def init_bottom_frame(self):
         frame = tk.Frame(self.window, bd=5, bg='blue')
