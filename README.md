@@ -25,3 +25,4 @@ This project contains the following branches which correspond with steps in the 
 * step 023 - Writing the output file - generating JSON
 * step 024 - Creating an App Controller
 * step 025 - Creating an empty GUI Frame
+* step 026 - Adding a menu to our GUI
