@@ -1,6 +1,7 @@
 import sys
 import tkinter as tk
 from tkinter import ttk
+from tkinter import filedialog
 
 
 class BankingView(tk.Frame):
@@ -88,6 +89,20 @@ class BankingView(tk.Frame):
     def init_bottom_frame(self):
         frame = tk.Frame(self.window, bd=5, bg='blue')
         frame.place(relx=0.5, rely=0.88, relheight=0.1, relwidth=0.96, anchor='n')
+
+    def get_file(self, data_path, title, filetypes):
+        self.window.attributes('-topmost', False)
+
+        return filedialog.askopenfilename(initialdir=data_path, title=title, filetypes=filetypes)
+
+    def select_accounts_tab(self):
+        self.input_tab_control.select(self.accounts_tab)
+
+    def select_transaction_tab(self):
+        self.input_tab_control.select(self.transactions_tab)
+
+    def select_output_tab(self):
+        self.output_tab_control.select(self.output_tab)
 
     def write_account_details(self, text):
         self.accounts_text.delete(1.0, tk.END)
