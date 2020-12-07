@@ -6,3 +6,4 @@ This project contains the following branches which correspond with steps in the 
 * step 004 - different variable types
 * step 005 - explicit casting
 * step 006 - extracting our data
+* step 007 - casting our data
