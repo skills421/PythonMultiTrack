@@ -36,4 +36,5 @@ GUI
 Note that in versions 3.8+ of Python on Mac the buttons may not display the text.  To get around this, use ttk.Button instead of tk.Button and remove the font size from the arguments to the constructor.
 
 * step 029 - Lay out the input and output frames
+* step 030 - Add button controllers
 

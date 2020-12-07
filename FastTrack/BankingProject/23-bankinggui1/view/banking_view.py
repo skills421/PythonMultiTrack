@@ -66,6 +66,12 @@ class BankingView(tk.Frame):
         self.input_tab_control.add(self.accounts_tab, text='Accounts File')
         self.input_tab_control.add(self.transactions_tab, text='Transactions File')
 
+        self.accounts_text = tk.Text(self.accounts_tab)
+        self.accounts_text.place(relx=0, rely=0, relwidth=1, relheight=1)
+
+        self.transactions_text = tk.Text(self.transactions_tab)
+        self.transactions_text.place(relx=0, rely=0, relwidth=1, relheight=1)
+
     def init_output_frame(self):
         frame = tk.Frame(self.window, bd=5)
         frame.place(relx=0.75, rely=0.14, relheight=0.72, relwidth=0.46, anchor='n')
@@ -76,6 +82,21 @@ class BankingView(tk.Frame):
         self.output_tab = tk.Frame(self.output_tab_control)
         self.output_tab_control.add(self.output_tab, text='Output File')
 
+        self.output_text = tk.Text(self.output_tab)
+        self.output_text.place(relx=0, rely=0, relwidth=1, relheight=1)
+
     def init_bottom_frame(self):
         frame = tk.Frame(self.window, bd=5, bg='blue')
         frame.place(relx=0.5, rely=0.88, relheight=0.1, relwidth=0.96, anchor='n')
+
+    def write_account_details(self, text):
+        self.accounts_text.delete(1.0, tk.END)
+        self.accounts_text.insert(tk.END, text)
+
+    def write_transaction_details(self, text):
+        self.transactions_text.delete(1.0, tk.END)
+        self.transactions_text.insert(tk.END, text)
+
+    def write_output_details(self, text):
+        self.output_text.delete(1.0, tk.END)
+        self.output_text.insert(tk.END, text)
