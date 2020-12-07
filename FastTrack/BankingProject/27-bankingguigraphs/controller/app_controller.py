@@ -80,7 +80,7 @@ class AppController:
 
     def analyse_transactions(self):
         credits, debits = self.get_credits_and_debits()
-        fig = plot_pie_chart(500, -230)
+        fig = plot_pie_chart(credits, debits)
         self.view.draw_graph("Pie Chart", fig)
 
     def parse_data(self, accounts_path, transaction_path):
