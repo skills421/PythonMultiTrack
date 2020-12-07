@@ -39,4 +39,5 @@ Note that in versions 3.8+ of Python on Mac the buttons may not display the text
 * step 030 - Add button controllers
 * step 031 - Read data files - accounts and transactions
 * step 032 - Parse the data files and output the result
+* step 033 - Tidy up the code for the Banking GUI
 
