@@ -7,3 +7,4 @@ This project contains the following branches which correspond with steps in the 
 * step 005 - explicit casting
 * step 006 - extracting our data
 * step 007 - casting our data
+* step 008 - base conversions - hex to decimal
