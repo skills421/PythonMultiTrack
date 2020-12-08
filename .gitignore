@@ -2,6 +2,9 @@
 ### Python template
 # Byte-compiled / optimized / DLL files
 __pycache__/
+
+index.html_backup/
+
 *.py[cod]
 *$py.class
 
